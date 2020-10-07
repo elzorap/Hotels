@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Hotels</string>
+    <string name="title">Title</string>
+    <string name="price">Price</string>
+    <string name="description">Description</string>
+    <string name="currency">EUR</string>
+    <string name="plus">+</string>
+    <string name="save">SAVE</string>
+    <string name="upload">UPLOAD</string>
+</resources>
