@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/my_toolbar"
+        layout="@layout/toolbar"/>
+
+    <ImageView
+        android:id="@+id/ivNewHotel"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_margin="@dimen/layout_margin"
+        android:background="@drawable/ic_unchecked_checkbox"
+        android:contentDescription="@string/upload"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar" />
+
+    <Button
+        android:id="@+id/btnSelect"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/ivNewHotel"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/layout_margin"
+        android:layout_toStartOf="@+id/btnUpload"
+        android:text="SELECT"
+        app:layout_constraintStart_toStartOf="@+id/ivNewHotel"
+        app:layout_constraintTop_toBottomOf="@+id/ivNewHotel" />
+
+    <Button
+        android:id="@+id/btnUpload"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/ivNewHotel"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/layout_margin"
+        android:text="@string/upload"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSelect"
+        app:layout_constraintEnd_toEndOf="@+id/ivNewHotel"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toEndOf="@+id/btnSelect"
+        app:layout_constraintTop_toBottomOf="@+id/ivNewHotel"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivNewHotel"
+        android:layout_centerHorizontal="true"
+        android:autofillHints="@string/title"
+        android:gravity="start"
+        android:hint="@string/title"
+        android:inputType="textCapWords"
+        android:textSize="@dimen/text_size_title"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnUpload"
+        app:layout_constraintStart_toStartOf="@+id/btnSelect"
+        app:layout_constraintTop_toBottomOf="@+id/btnSelect" />
+
+    <EditText
+        android:id="@+id/etPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etTitle"
+        android:layout_margin="@dimen/layout_margin"
+        android:autofillHints="@string/price"
+        android:hint="@string/price"
+        android:inputType="number"
+        android:textSize="@dimen/text_size_price"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/etTitle"
+        app:layout_constraintStart_toStartOf="@+id/etTitle"
+        app:layout_constraintTop_toBottomOf="@+id/etTitle" />
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPrice"
+        android:layout_alignStart="@+id/etTitle"
+        android:layout_alignEnd="@+id/etTitle"
+        android:autofillHints="@string/description"
+        android:hint="@string/description"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/etPrice"
+        app:layout_constraintStart_toStartOf="@+id/etPrice"
+        app:layout_constraintTop_toBottomOf="@+id/etPrice" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/etDescription"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
